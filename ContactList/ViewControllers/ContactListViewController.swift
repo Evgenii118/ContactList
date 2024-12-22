@@ -7,11 +7,11 @@
 
 import UIKit
 
-class ContactListViewController: UITableViewController {
+final class ContactListViewController: UITableViewController {
+    
+    private let dataStore = DataStore()
     
     private var persons = [Person]()
-    
-    let dataStore = DataStore()
     
     private var names: Set<String> = []
     private var lastNames: Set<String> = []
@@ -20,14 +20,12 @@ class ContactListViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        getNames()
+        getInfoAboutPersons()
         getPersons()
-        
     }
     
+    // MARK: - Private methods
     private func getPersons() {
-        
         for _ in 0..<dataStore.names.count {
             persons.append(
                 Person(
@@ -41,7 +39,7 @@ class ContactListViewController: UITableViewController {
         
     }
     
-    private func getNames() {
+    private func getInfoAboutPersons() {
         for name in dataStore.names {
             names.insert(name)
         }

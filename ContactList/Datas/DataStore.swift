@@ -9,7 +9,15 @@ import Foundation
 
 struct DataStore {
     var names: Set = ["Mark", "Pol", "Anna", "Peter", "Steve", "Tim", "Tim"]
-    var lastNames: Set = ["Jobs", "Izyurov", "Petrov", "Cook", "Taylor", "Petrov", "Mironov"]
+    var lastNames: Set = [
+        "Jobs",
+        "Izyurov",
+        "Petrov",
+        "Cook",
+        "Taylor",
+        "Petrov",
+        "Mironov"
+    ]
     var phones: Set = [
         "79826415998",
         "79049815619",

@@ -7,8 +7,8 @@
 
 import UIKit
 
-class ContactDetailsViewController: UIViewController {
-
+final class ContactDetailsViewController: UIViewController {
+    
     @IBOutlet var fullNameLabel: UILabel!
     @IBOutlet var phoneLabel: UILabel!
     @IBOutlet var emailLabel: UILabel!
@@ -17,12 +17,11 @@ class ContactDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         fullNameLabel.text = "\(person.name) \(person.lastName)"
         phoneLabel.text = person.phone
         emailLabel.text = person.email
     }
     
-
 
 }
